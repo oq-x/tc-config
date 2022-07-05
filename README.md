@@ -18,7 +18,7 @@ config "main" {
 ```
 `index.js`:
 ```js
-import { parse } from "https://deno.land/x/tconfig@v1.0.3/index.js"
+import { parse } from "https://deno.land/x/tconfig@v1.0.4/index.js"
 const config = await Deno.readFile("./config.tc");
 parse(config) // { name: "main", properties: { yes: true, no: false, zero: 0, one: 1, test: "TEST", test1: "TEST1"} }
 ```
