@@ -29,7 +29,7 @@ export function parse(input) {
         const type = args[0].replace(/\t/g, '')
         const name = args[1]
         let value = args.slice(2).join(' ')
-        for (const prop in process.env) {
+        for (const prop in Deno.env.toObject()) {
             const regex = new RegExp(`{${prop}}`, 'g')
             value = value.replace(regex, process.env[prop])
         }
