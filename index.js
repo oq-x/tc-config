@@ -31,7 +31,7 @@ export function parse(input) {
         let value = args.slice(2).join(' ')
         for (const prop in Deno.env.toObject()) {
             const regex = new RegExp(`{${prop}}`, 'g')
-            value = value.replace(regex, process.env[prop])
+            value = value.replace(regex, Deno.env.get[prop])
         }
         switch (type) {
             case 'string':
