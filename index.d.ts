@@ -1,4 +1,4 @@
-declare module "tconfig" {
+declare module "tc-config" {
     export interface output {
         name: string;
         properties: any;
