@@ -18,7 +18,14 @@ config "main" {
 ```
 `index.js`:
 ```js
-import { parse } from "https://deno.land/x/tconfig@v1.0.4/index.js"
+import { parse } from "tc-config"
+import fs from "fs"
+const config = await fs.readFileSync("./config.tc");
+parse(config) // { name: "main", properties: { yes: true, no: false, zero: 0, one: 1, test: "TEST", test1: "TEST1"} }
+```
+or for Deno:
+```js
+import { parse } from "https://deno.land/x/tconfig@v1.0.6/index.js"
 const config = await Deno.readFile("./config.tc");
 parse(config) // { name: "main", properties: { yes: true, no: false, zero: 0, one: 1, test: "TEST", test1: "TEST1"} }
 ```
