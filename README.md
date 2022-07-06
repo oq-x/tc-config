@@ -25,7 +25,7 @@ parse(config) // { name: "main", properties: { yes: true, no: false, zero: 0, on
 ```
 or for Deno:
 ```js
-import { parse } from "https://deno.land/x/tconfig@v1.0.6/index.js"
+import { parse } from "https://deno.land/x/tconfig@v1.0.6/deno/index.js"
 const config = await Deno.readFile("./config.tc");
 parse(config) // { name: "main", properties: { yes: true, no: false, zero: 0, one: 1, test: "TEST", test1: "TEST1"} }
 ```
